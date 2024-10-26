@@ -1,4 +1,3 @@
-
 val kotlin_version: String by project
 val logback_version: String by project
 
@@ -33,7 +32,12 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
     // database
-    implementation ("mysql:mysql-connector-java:8.0.11")
-    implementation ("org.ktorm:ktorm-core:3.2.0")
-    implementation ("org.ktorm:ktorm-support-mysql:3.2.0")
+    implementation("mysql:mysql-connector-java:8.0.11")
+    implementation("org.ktorm:ktorm-core:3.2.0")
+    implementation("org.ktorm:ktorm-support-mysql:3.2.0")
+
+    val koin_version = "3.2.0"
+    implementation("io.insert-koin:koin-core:$koin_version")
+    implementation("io.insert-koin:koin-ktor:$koin_version")
+    implementation("io.insert-koin:koin-logger-slf4j:$koin_version")
 }
