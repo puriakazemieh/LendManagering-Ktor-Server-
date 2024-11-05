@@ -20,5 +20,11 @@ class UserRepositoryImp(private val db: Database) :  KoinComponent {
             }.firstOrNull()
     }
 
+    fun createUser(username: String, password: String) {
+        db.insert(UserEntity) {
+            set(it.name, username)
+            set(it.password, password)
+        }
+    }
 
 }

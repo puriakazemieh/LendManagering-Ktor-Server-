@@ -40,4 +40,11 @@ dependencies {
     implementation("io.insert-koin:koin-core:$koin_version")
     implementation("io.insert-koin:koin-ktor:$koin_version")
     implementation("io.insert-koin:koin-logger-slf4j:$koin_version")
+
+
+    val auth_version = "1.6.4"
+    implementation (group= "org.mindrot", name= "jbcrypt", version= "0.4")
+    implementation ("io.ktor:ktor-auth:$auth_version")
+    implementation ("io.ktor:ktor-auth-jwt:$auth_version")
+
 }
